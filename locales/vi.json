@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "services": "Dịch vụ",
+    "softwareDev": "Phát triển phần mềm",
+    "aiSolutions": "Giải pháp AI",
+    "itStaffing": "Nhân sự IT",
+    "about": "Về chúng tôi",
+    "whyChooseUs": "Tại sao chọn chúng tôi",
+    "gallery": "Thư viện ảnh",
+    "clients": "Khách hàng",
+    "certifications": "Chứng chỉ",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "title1": "Chúng tôi tạo ra",
+    "title2": "giải pháp số",
+    "title3": "cho doanh nghiệp của bạn",
+    "subtitle": "Dịch vụ phát triển phần mềm chuyên nghiệp giúp biến ý tưởng của bạn thành những sản phẩm số mạnh mẽ. Chúng tôi chuyên về phát triển web, ứng dụng di động và các giải pháp phần mềm tùy chỉnh.",
+    "getStarted": "Bắt đầu",
+    "ourServices": "Dịch vụ của chúng tôi"
+  },
+  "services": {
+    "title": "Dịch vụ cốt lõi",
+    "subtitle": "Chúng tôi cung cấp các giải pháp công nghệ toàn diện để thúc đẩy doanh nghiệp của bạn phát triển",
+    "learnMore": "Tìm hiểu thêm"
+  },
+  "about": {
+    "title": "Về Blameo",
+    "description": "Chúng tôi là một đội ngũ các nhà phát triển và thiết kế đầy đam mê, tận tụy tạo ra những trải nghiệm số đặc biệt. Với nhiều năm kinh nghiệm trong phát triển phần mềm, chúng tôi giúp các doanh nghiệp biến ý tưởng thành hiện thực thông qua các giải pháp công nghệ sáng tạo."
+  },
+  "clients": {
+    "title": "Được tin tưởng bởi các công ty hàng đầu",
+    "subtitle": "Chúng tôi tự hào khi hợp tác với các nhà lãnh đạo ngành và các công ty sáng tạo trên toàn thế giới"
+  },
+  "certifications": {
+    "title": "Chứng chỉ của chúng tôi",
+    "subtitle": "Các chứng chỉ được công nhận trong ngành xác nhận chuyên môn và cam kết về sự xuất sắc của chúng tôi"
+  },
+  "whyChooseUs": {
+    "title": "Tại sao chọn Blameo",
+    "subtitle": "Điều gì làm chúng tôi khác biệt so với đối thủ cạnh tranh"
+  },
+  "footer": {
+    "description": "Dịch vụ phát triển phần mềm chuyên nghiệp cho doanh nghiệp hiện đại",
+    "services": "Dịch vụ",
+    "softwareDev": "Phát triển phần mềm",
+    "aiSolutions": "Giải pháp AI",
+    "itStaffing": "Nhân sự IT",
+    "company": "Công ty",
+    "about": "Về chúng tôi",
+    "clients": "Khách hàng",
+    "certifications": "Chứng chỉ",
+    "contact": "Thông tin liên hệ",
+    "address": "123 Tech Street, Quận 1, TP. Hồ Chí Minh, Việt Nam"
+  },
+  "contact": {
+    "title": "Liên hệ với chúng tôi",
+    "subtitle": "Sẵn sàng bắt đầu dự án tiếp theo của bạn? Hãy thảo luận về cách chúng tôi có thể giúp biến ý tưởng của bạn thành hiện thực.",
+    "formTitle": "Gửi tin nhắn cho chúng tôi",
+    "firstName": "Tên",
+    "lastName": "Họ",
+    "email": "Địa chỉ email",
+    "phone": "Số điện thoại",
+    "company": "Tên công ty",
+    "service": "Dịch vụ quan tâm",
+    "selectService": "Chọn một dịch vụ",
+    "softwareDev": "Phát triển phần mềm",
+    "aiSolutions": "Giải pháp AI",
+    "itStaffing": "Nhân lực IT",
+    "consultation": "Tư vấn",
+    "budget": "Ngân sách dự án",
+    "selectBudget": "Chọn khoảng ngân sách",
+    "message": "Mô tả dự án",
+    "submit": "Gửi tin nhắn",
+    "infoTitle": "Thông tin liên hệ",
+    "addressTitle": "Địa chỉ văn phòng",
+    "address": "123 Đường Công nghệ, Quận 1\nThành phố Hồ Chí Minh, Việt Nam",
+    "phoneTitle": "Số điện thoại",
+    "emailTitle": "Địa chỉ email",
+    "hoursTitle": "Giờ làm việc",
+    "hours": "Thứ Hai - Thứ Sáu: 9:00 AM - 6:00 PM\nCuối tuần: Theo lịch hẹn",
+    "followUs": "Theo dõi chúng tôi"
+  },
+  "faq": {
+    "title": "Câu hỏi thường gặp",
+    "subtitle": "Câu trả lời nhanh cho các câu hỏi thường gặp về dịch vụ của chúng tôi",
+    "q1": "Một dự án điển hình mất bao lâu?",
+    "a1": "Thời gian dự án thay đổi dựa trên độ phức tạp và phạm vi. Các dự án nhỏ có thể mất 2-4 tuần, trong khi các giải pháp doanh nghiệp có thể mất 3-6 tháng. Chúng tôi cung cấp lịch trình chi tiết trong quá trình tư vấn.",
+    "q2": "Bạn có cung cấp hỗ trợ liên tục không?",
+    "a2": "Có, chúng tôi cung cấp hỗ trợ toàn diện sau khi ra mắt bao gồm bảo trì, cập nhật và hỗ trợ kỹ thuật để đảm bảo giải pháp của bạn tiếp tục hoạt động tối ưu.",
+    "q3": "Bạn có thể làm việc với đội ngũ hiện tại của chúng tôi không?",
+    "a3": "Tuyệt đối! Chúng tôi xuất sắc trong việc tăng cường đội ngũ và có thể tích hợp liền mạch với quy trình phát triển và cấu trúc đội ngũ hiện tại của bạn.",
+    "q4": "Bạn chuyên về những công nghệ nào?",
+    "a4": "Chúng tôi làm việc với các công nghệ hiện đại bao gồm React, Node.js, Python, Java, các framework AI/ML, nền tảng đám mây (AWS, Azure, GCP), và các công cụ phát triển di động."
+  },
+  "gallery": {
+    "title": "Hành trình & Thành tựu",
+    "subtitle": "Trưng bày những cột mốc, khoảnh khắc đội ngũ và câu chuyện thành công",
+    "team": "Đội ngũ",
+    "office": "Cuộc sống văn phòng",
+    "projects": "Dự án tiêu biểu",
+    "events": "Sự kiện & Lễ kỷ niệm"
+  }
+}

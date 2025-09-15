@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "services": "Dịch vụ",
+    "about": "Thông tin",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "title1": "Chúng tôi tạo ra",
+    "title2": "giải pháp số",
+    "title3": "cho doanh nghiệp của bạn",
+    "subtitle": "Dịch vụ phát triển phần mềm chuyên nghiệp giúp biến ý tưởng của bạn thành những sản phẩm số mạnh mẽ. Chúng tôi chuyên về phát triển web, ứng dụng di động và các giải pháp phần mềm tùy chỉnh.",
+    "getStarted": "Bắt đầu",
+    "ourServices": "Dịch vụ của chúng tôi"
+  },
+  "services": {
+    "title": "Các dịch vụ chúng tôi cung cấp"
+  },
+  "about": {
+    "title": "Về Blameo",
+    "description": "Chúng tôi là một đội ngũ các nhà phát triển và thiết kế đầy đam mê, tận tụy tạo ra những trải nghiệm số đặc biệt. Với nhiều năm kinh nghiệm trong phát triển phần mềm, chúng tôi giúp các doanh nghiệp biến ý tưởng thành hiện thực thông qua các giải pháp công nghệ sáng tạo."
+  }
+}

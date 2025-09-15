@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blameo - Trusted IT Partner</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        :root {
+            --blameo-blue: #51bea1;
+        }
+
+        .clients-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .client-logo {
+            width: 150px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 18px;
+            box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.04);
+            transition: box-shadow 0.2s;
+            margin: 0;
+            padding: 0;
+        }
+
+        .client-logo img {
+            max-width: 120px;
+            max-height: 60px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Footer styles */
+        .footer {
+            background: linear-gradient(90deg, #23243a 0%, #2d2e4a 100%);
+            color: #fff;
+            padding: 2.5rem 0 1rem 0;
+            font-size: 1rem;
+            box-shadow: 0 -2px 24px 0 rgba(0, 0, 0, 0.08);
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .footer-brand {
+            flex: 1 1 260px;
+            min-width: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        .footer-logo-large {
+            width: 120px;
+            height: auto;
+            margin-bottom: 0;
+        }
+
+        .footer-description {
+            color: #bfc6d1;
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.5;
+            max-width: 260px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            color: #bfc6d1;
+            font-size: 1.25rem;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .social-link:hover {
+            color: #ffb347;
+            transform: scale(1.15);
+        }
+
+        .footer-contact {
+            flex: 1 1 220px;
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .footer-contact h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.08rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            color: #bfc6d1;
+            font-size: 1rem;
+        }
+
+        .contact-item i {
+            color: var(--blameo-blue) !important;
+        }
+
+        .social-link i {
+            color: #fff !important;
+        }
+
+        .contact-item a {
+            color: #bfc6d1;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-item a:hover {
+            color: #ffb347;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: #bfc6d1;
+            font-size: 0.98rem;
+            margin-top: 1rem;
+            letter-spacing: 0.2px;
+        }
+
+        @media (max-width: 900px) {
+            .footer-content {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1.5rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+
+        .service-features {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.4rem;
+            margin: 1.1rem 0 0.5rem 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 0.18rem 0.2rem 0.18rem 0;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.04);
+            transition: background 0.2s;
+            font-size: 1rem;
+            color: #23243a;
+        }
+
+        .feature-item i {
+            color: var(--blameo-blue);
+            font-size: 1.08rem;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .feature-item span {
+            font-size: 1rem;
+            color: #23243a;
+            font-weight: 500;
+            letter-spacing: 0.1px;
+        }
+
+        .service-card p {
+            margin-bottom: 2.1rem;
+        }
+
+        .service-tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem 0.6rem;
+            margin-top: 1.1rem;
+            justify-content: flex-start;
+        }
+
+        .tech-badge {
+            background: linear-gradient(90deg, #f3f7fa 60%, #e6f4f1 100%);
+            color: #1a2a33;
+            border-radius: 18px;
+            padding: 0.18rem 1.05rem;
+            font-size: 0.97rem;
+            font-weight: 600;
+            box-shadow: 0 1px 6px 0 rgba(81, 190, 161, 0.08);
+            letter-spacing: 0.08px;
+            margin-bottom: 0.1rem;
+            border: 1px solid #e0ecea;
+            transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+            cursor: default;
+        }
+
+        .tech-badge:hover {
+            background: linear-gradient(90deg, #e6f4f1 60%, #c6f1e7 100%);
+            color: var(--blameo-blue);
+            box-shadow: 0 2px 12px 0 rgba(81, 190, 161, 0.13);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Skip to content (accessibility) -->
+    <a href="#content" class="skip-to-content">Skip to content</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="assets/images/logo.svg" alt="Logo" class="logo-img">
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link" data-translate="nav.home">Home</a></li>
+                        <li><a href="#thong-tin" class="nav-link" data-translate="nav.about">About</a></li>
+                        <li><a href="#dich-vu" class="nav-link" data-translate="nav.services">Services</a></li>
+                        <li><a href="#why-choose-us" class="nav-link" data-translate="nav.whyChooseUs">Why Choose Us</a>
+                        </li>
+                        <!-- <li><a href="explore.html" class="nav-link">Explore</a></li> -->
+                        <!-- <li><a href="careers.html" class="nav-link">Careers</a></li> -->
+                        <!-- <li><a href="portfolio.html" class="nav-link">Portfolio</a></li> -->
+                        <li><a href="#footer" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- <div class="language-switcher">
+                    <button id="en-btn" class="lang-btn active">EN</button>
+                    <button id="vi-btn" class="lang-btn">VI</button>
+                </div> -->
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span data-translate="hero.title1">We create</span> <span class="highlight"
+                                data-translate="hero.title2">digital solutions</span><br>
+                            <span data-translate="hero.title3">for your business</span>
+                        </h1>
+                        <p class="hero-subtitle" data-translate="hero.subtitle">
+                            Professional software development services that help transform your ideas into powerful
+                            digital products. We specialize in web development, mobile applications, and custom software
+                            solutions.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#dich-vu" class="btn btn-primary" data-translate="hero.getStarted">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="hero-illustration">
+                            <!--
+                            To change the hero illustration, replace the src below with one of the following:
+                            - assets/images/hero-illustration.svg (current, backup)
+                            - assets/images/hero-illustration-ito1.svg (modern ITO style, option 1)
+                            - assets/images/hero-illustration-ito2.svg (modern ITO style, option 2)
+                            -->
+                            <img src="assets/images/hero-illustration.svg" alt="Digital Solutions Illustration"
+                                class="hero-main-image">
+                            <!-- Example for alternative:
+                            <img src="assets/images/hero-illustration-ito1.svg" alt="ITO Style Illustration 1" class="hero-main-image">
+                            -->
+                        </div>
+                        <div class="floating-cards">
+                            <div class="floating-card card-1">
+                                <div class="card-icon"><i class="fas fa-code"></i></div>
+                                <div class="card-text">Web Development</div>
+                            </div>
+                            <div class="floating-card card-2">
+                                <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
+                                <div class="card-text">Mobile Apps</div>
+                            </div>
+                            <div class="floating-card card-3">
+                                <div class="card-icon"><i class="fas fa-cloud"></i></div>
+                                <div class="card-text">Cloud Solutions</div>
+                            </div>
+                            <div class="floating-card card-4">
+                                <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                                <div class="card-text">Fast Delivery</div>
+                            </div>
+                        </div>
+                        <div class="hero-background">
+                            <div class="bg-circle circle-1"></div>
+                            <div class="bg-circle circle-2"></div>
+                            <div class="bg-circle circle-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="thong-tin" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 data-translate="about.title">About Blameo</h2>
+                        <p data-translate="about.description">We are a team of passionate developers and designers
+                            dedicated to creating exceptional digital experiences. With years of experience in software
+                            development, we help businesses transform their ideas into reality through innovative
+                            technology solutions.</p>
+                        <div class="about-features">
+                            <div class="feature">
+                                <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+                                <div class="feature-text">Fast & Reliable</div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
+                                <div class="feature-text">Goal-Oriented</div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+                                <div class="feature-text">Innovative Solutions</div>
+                            </div>
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                                <div class="stat-number">100+</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-smile"></i></div>
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Happy Clients</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                                <div class="stat-number">8+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="about-illustration">
+                            <img src="assets/images/about-success.svg" alt="Our Success Story" class="about-image">
+                        </div>
+                        <div class="tech-showcase">
+                            <div class="tech-item tech-1">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="tech-item tech-2">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="tech-item tech-3">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="tech-item tech-4">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <div class="tech-item tech-5">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="tech-item tech-6">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="dich-vu" class="services">
+            <div class="services-background">
+                <div class="bg-shape shape-1"></div>
+                <div class="bg-shape shape-2"></div>
+                <div class="bg-shape shape-3"></div>
+            </div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="services.title">Our Core Services</h2>
+                    <p data-translate="services.subtitle">We provide comprehensive technology solutions to drive your
+                        business forward</p>
+                </div>
+                <div class="services-grid">
+                    <!-- Software Development Service -->
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Software Development</h3>
+                        <p>Custom web, mobile, and enterprise software solutions using cutting-edge technologies.</p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <i class="fas fa-globe"></i>
+                                <span>Web Applications</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Mobile Apps</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-desktop"></i>
+                                <span>Desktop Software</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-cloud"></i>
+                                <span>Cloud Solutions</span>
+                            </div>
+                        </div>
+                        <div class="service-tech-stack">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Java</span>
+                            <span class="tech-badge">.NET</span>
+                            <span class="tech-badge">Vue.js</span>
+                            <span class="tech-badge">Angular</span>
+                            <span class="tech-badge">Flutter</span>
+                        </div>
+                    </div>
+
+                    <!-- AI Solutions Service -->
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI Solutions</h3>
+                        <p>Machine learning, data analytics, and AI-powered applications to automate and optimize your
+                            business processes.</p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <i class="fas fa-robot"></i>
+                                <span>Machine Learning</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Data Analytics</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-eye"></i>
+                                <span>Computer Vision</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-comments"></i>
+                                <span>NLP & Chatbots</span>
+                            </div>
+                        </div>
+                        <div class="service-tech-stack">
+                            <span class="tech-badge">TensorFlow</span>
+                            <span class="tech-badge">PyTorch</span>
+                            <span class="tech-badge">OpenAI</span>
+                            <span class="tech-badge">AWS AI</span>
+                            <span class="tech-badge">Keras</span>
+                            <span class="tech-badge">Pandas</span>
+                        </div>
+                    </div>
+
+                    <!-- IT Staffing Service -->
+                    <div class="service-card">
+                        <div class="service-card-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>IT Staffing</h3>
+                        <p>Dedicated development teams, staff augmentation, and offshore development center (ODC)
+                            solutions.</p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <i class="fas fa-user-plus"></i>
+                                <span>Staff Augmentation</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-users"></i>
+                                <span>Dedicated Teams</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-building"></i>
+                                <span>ODC Solutions</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-handshake"></i>
+                                <span>Remote & On-site</span>
+                            </div>
+                        </div>
+                        <div class="service-tech-stack">
+                            <span class="tech-badge">Full-Stack</span>
+                            <span class="tech-badge">DevOps</span>
+                            <span class="tech-badge">QA</span>
+                            <span class="tech-badge">UI/UX</span>
+                            <span class="tech-badge">Agile</span>
+                            <span class="tech-badge">Scrum</span>
+                            <span class="tech-badge">Jira</span>
+                            <span class="tech-badge">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients & Partners Section -->
+        <section id="clients-partners" class="clients-partners-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="clients.title">Trusted by Leading Companies</h2>
+                    <p data-translate="clients.subtitle">We're proud to partner with industry leaders and innovative
+                        companies worldwide</p>
+                </div>
+                <div class="clients-grid">
+                    <div class="client-logo">
+                        <img src="assets/images/clients/nexmo.svg" alt="Nexmo"
+                            style="max-width: 120px; max-height: 60px; object-fit: contain; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="client-logo" style="padding: 0 0.5rem;">
+                        <img src="assets/images/clients/viettel_networks.jpg" alt="Viettel Networks"
+                            style="max-width: 120px; max-height: 60px; object-fit: contain; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/images/clients/amigo.svg" alt="Viettel Solutions"
+                            style="max-width: 120px; max-height: 60px; object-fit: contain; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/images/clients/vinnet.png" alt="Vinnet"
+                            style="max-width: 120px; max-height: 60px; object-fit: contain; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/images/clients/twinger.png" alt="Kim Nam Group"
+                            style="max-width: 120px; max-height: 60px; object-fit: contain; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/images/clients/moha.webp" alt="Moha"
+                            style="max-width: 120px; max-height: 60px; object-fit: contain; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/images/clients/migitek.avif" alt="Migitek"
+                            style="max-width: 120px; max-height: 60px; object-fit: contain; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/images/clients/dtn.png" alt="DTN"
+                            style="max-width: 120px; max-height: 60px; object-fit: contain; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/images/clients/fanxipang.svg" alt="Fanxipang"
+                            style="max-width: 120px; max-height: 60px; object-fit: contain; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/images/clients/LuckyNickel.svg" alt="Lucky Nickel"
+                            style="max-width: 120px; max-height: 60px; object-fit: contain; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="client-logo" style="padding: 0 0.5rem;">
+                        <img src="assets/images/clients/Mor.webp" alt="Mor"
+                            style="max-width: 120px; max-height: 60px; object-fit: contain; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="client-logo">
+                        <img src="assets/images/clients/viettelsolutions.png" alt="Amigo"
+                            style="max-width: 120px; max-height: 60px; object-fit: contain; display: block; margin: 0 auto;">
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="certifications.title">Our Certifications</h2>
+                    <p data-translate="certifications.subtitle">Industry-recognized certifications that validate our
+                        expertise and commitment to excellence</p>
+                </div>
+                <div class="certifications-grid certifications-grid-5"
+                    style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 2.5rem;">
+                    <div class="certification-card">
+                        <div class="cert-logo" style="height: 140px; display: flex; align-items: center; justify-content: center; padding: 0;">
+                            <img src="assets/images/certifications/1.png" alt="AWS Certified Solution Architect Associate" style="max-width: 95%; max-height: 95%; object-fit: contain; display: block;">
+                        </div>
+                        <h3 style="font-size: 0.82rem;">AWS Certified Solution Architect Associate</h3>
+                    </div>
+                    <div class="certification-card">
+                        <div class="cert-logo" style="height: 140px; display: flex; align-items: center; justify-content: center; padding: 0;">
+                            <img src="assets/images/certifications/AWS-Devloper-Associate-1.webp" alt="AWS Certified Developer Associate" style="max-width: 95%; max-height: 95%; object-fit: contain; display: block;">
+                        </div>
+                        <h3 style="font-size: 0.82rem;">AWS Certified Developer Associate</h3>
+                    </div>
+                    <div class="certification-card">
+                        <div class="cert-logo" style="height: 140px; display: flex; align-items: center; justify-content: center; padding: 0;">
+                            <img src="assets/images/certifications/3.png" alt="Project Management Professional (PMI)" style="max-width: 95%; max-height: 95%; object-fit: contain; display: block;">
+                        </div>
+                        <h3 style="font-size: 0.82rem;">Project Management Professional (PMI)</h3>
+                    </div>
+                    <div class="certification-card">
+                        <div class="cert-logo" style="height: 140px; display: flex; align-items: center; justify-content: center; padding: 0;">
+                            <img src="assets/images/certifications/4.png" alt="Scrum Alliance ACSM" style="max-width: 95%; max-height: 95%; object-fit: contain; display: block;">
+                        </div>
+                        <h3 style="font-size: 0.82rem;">Scrum Alliance ACSM</h3>
+                    </div>
+                    <div class="certification-card">
+                        <div class="cert-logo" style="height: 140px; display: flex; align-items: center; justify-content: center; padding: 0;">
+                            <img src="assets/images/certifications/5.webp" alt="ISTQB" style="max-width: 95%; max-height: 95%; object-fit: contain; display: block;">
+                        </div>
+                        <h3 style="font-size: 0.82rem;">International Software Testing Qualifications Board</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-choose-us" class="why-choose-us-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="whyChooseUs.title">Why Choose Blameo</h2>
+                    <p data-translate="whyChooseUs.subtitle">What sets us apart from the competition</p>
+                </div>
+                <div class="why-choose-content why-choose-no-visual">
+                    <div class="why-choose-list why-choose-list-centered">
+                        <div class="reason-item">
+                            <div class="reason-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="reason-content">
+                                <h3>Proven Expertise</h3>
+                                <p>8+ years of experience with 100+ successful projects delivered to satisfied clients
+                                    worldwide.</p>
+                            </div>
+                        </div>
+                        <div class="reason-item">
+                            <div class="reason-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="reason-content">
+                                <h3>Fast Delivery</h3>
+                                <p>Agile development methodology ensures rapid delivery without compromising on quality.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="reason-item">
+                            <div class="reason-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="reason-content">
+                                <h3>Security First</h3>
+                                <p>Enterprise-grade security practices and compliance with international standards.</p>
+                            </div>
+                        </div>
+                        <div class="reason-item">
+                            <div class="reason-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="reason-content">
+                                <h3>Cost Effective</h3>
+                                <p>Competitive pricing with transparent costs and no hidden fees.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/images/logo-white.svg" alt="Blameo Logo" class="footer-logo footer-logo-large">
+                    <!-- Logo trắng cho footer -->
+                    <p class="footer-description" data-translate="footer.description">Professional software development
+                        services for modern businesses</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/19126492" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.facebook.com/blameo.technology" target="_blank" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4 data-translate="footer.services">Services</h4>
+                        <nav class="footer-nav">
+                            <span class="footer-link" data-translate="footer.softwareDev">Software Development</span>
+                            <span class="footer-link" data-translate="footer.aiSolutions">AI Solutions</span>
+                            <span class="footer-link" data-translate="footer.itStaffing">IT Staffing</span>
+                        </nav>
+                    </div>
+                    <div class="footer-section">
+                        <h4 data-translate="footer.company">Company</h4>
+                        <nav class="footer-nav">
+                            <a href="#thong-tin" class="footer-link" data-translate="footer.about">About</a>
+                            <a href="#clients-partners" class="footer-link" data-translate="footer.clients">Clients</a>
+                            <a href="#certifications" class="footer-link" data-translate="footer.certifications">Certifications</a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-translate="footer.contact">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>18/76 Tran Tu Binh Street, Hanoi, Vietnam</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@blameo.com">contact@blameo.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+84987563454">+84 987 563 454</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/language-switcher.js"></script>
+    <script>
+        // Smooth scroll to footer when clicking Contact in header
+        const contactLinks = document.querySelectorAll('.nav-link[href="#footer"]');
+        contactLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const footer = document.getElementById('footer');
+                if (footer) {
+                    footer.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        // Smooth scroll to services when clicking Get Started
+        const getStartedBtn = document.querySelector('.btn.btn-primary[href="#dich-vu"]');
+        if(getStartedBtn) {
+            getStartedBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const services = document.getElementById('dich-vu');
+                if (services) {
+                    services.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#51BEA1;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#51BEA1;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#grad2)" rx="20"/>
+  
+  <!-- Phone -->
+  <rect x="150" y="30" width="100" height="180" fill="#2c3e50" rx="15"/>
+  <rect x="160" y="50" width="80" height="140" fill="#ecf0f1" rx="5"/>
+  
+  <!-- Screen content -->
+  <rect x="170" y="60" width="60" height="8" fill="#51BEA1"/>
+  <rect x="170" y="75" width="40" height="6" fill="#3498db"/>
+  <rect x="170" y="88" width="50" height="6" fill="#e67e22"/>
+  
+  <!-- App icons -->
+  <rect x="175" y="105" width="15" height="15" fill="#e74c3c" rx="3"/>
+  <rect x="195" y="105" width="15" height="15" fill="#2ecc71" rx="3"/>
+  <rect x="215" y="105" width="15" height="15" fill="#f39c12" rx="3"/>
+  
+  <rect x="175" y="125" width="15" height="15" fill="#9b59b6" rx="3"/>
+  <rect x="195" y="125" width="15" height="15" fill="#1abc9c" rx="3"/>
+  <rect x="215" y="125" width="15" height="15" fill="#34495e" rx="3"/>
+  
+  <!-- Floating phones -->
+  <rect x="50" y="80" width="60" height="100" fill="#34495e" rx="10" opacity="0.6"/>
+  <rect x="57" y="95" width="46" height="70" fill="#ecf0f1" rx="3"/>
+  
+  <rect x="290" y="120" width="60" height="100" fill="#34495e" rx="10" opacity="0.6"/>
+  <rect x="297" y="135" width="46" height="70" fill="#ecf0f1" rx="3"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="80" cy="50" r="12" fill="#51BEA1" opacity="0.5"/>
+  <circle cx="320" cy="80" r="8" fill="#51BEA1" opacity="0.4"/>
+  <rect x="30" y="220" width="15" height="15" fill="#51BEA1" opacity="0.6" rx="2"/>
+  <polygon points="350,240 360,260 340,260" fill="#51BEA1" opacity="0.5"/>
+</svg>

@@ -1,0 +1,31 @@
+{
+  "companyName": "Blameo",
+  "slogan": "Innovation",
+  "heroSection": {
+    "title": "Welcome to Blameo",
+    "description": "Your partner in IT outsourcing solutions."
+  },
+  "services": {
+    "title": "Our Services",
+    "list": [
+      "Software Development",
+      "Mobile App Development",
+      "Web Development",
+      "Cloud Solutions",
+      "IT Consulting"
+    ]
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "description": "At Blameo, we leverage technology to drive innovation and deliver exceptional IT outsourcing services tailored to your business needs."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with us to discuss your project requirements.",
+    "email": "info@blameo.com",
+    "phone": "+123 456 7890"
+  },
+  "footer": {
+    "copyright": "© 2023 Blameo. All rights reserved."
+  }
+}

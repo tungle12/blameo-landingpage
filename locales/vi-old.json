@@ -1,0 +1,23 @@
+{
+  "landing_page": {
+    "title": "Blameo - Công ty IT Outsourcing",
+    "slogan": "Đổi mới",
+    "sections": {
+      "about": {
+        "header": "Về Chúng Tôi",
+        "content": "Blameo là công ty chuyên cung cấp dịch vụ IT outsourcing với đội ngũ chuyên gia giàu kinh nghiệm."
+      },
+      "services": {
+        "header": "Dịch Vụ",
+        "content": "Chúng tôi cung cấp các dịch vụ phát triển phần mềm, quản lý dự án và tư vấn công nghệ."
+      },
+      "contact": {
+        "header": "Liên Hệ",
+        "content": "Để biết thêm thông tin, vui lòng liên hệ với chúng tôi qua email hoặc điện thoại."
+      }
+    },
+    "footer": {
+      "copyright": "© 2023 Blameo. Tất cả quyền được bảo lưu."
+    }
+  }
+}

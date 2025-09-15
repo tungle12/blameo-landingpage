@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#51BEA1;stop-opacity:0.1" />
+      <stop offset="50%" style="stop-color:#51BEA1;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#51BEA1;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#heroGrad)"/>
+  
+  <!-- Abstract shapes representing digital transformation -->
+  <g opacity="0.6">
+    <!-- Central hub -->
+    <circle cx="300" cy="200" r="40" fill="none" stroke="#51BEA1" stroke-width="2"/>
+    <circle cx="300" cy="200" r="15" fill="#51BEA1"/>
+    
+    <!-- Connected nodes -->
+    <circle cx="180" cy="120" r="20" fill="none" stroke="#51BEA1" stroke-width="2"/>
+    <circle cx="180" cy="120" r="8" fill="#51BEA1"/>
+    
+    <circle cx="420" cy="140" r="25" fill="none" stroke="#51BEA1" stroke-width="2"/>
+    <circle cx="420" cy="140" r="10" fill="#51BEA1"/>
+    
+    <circle cx="150" cy="280" r="18" fill="none" stroke="#51BEA1" stroke-width="2"/>
+    <circle cx="150" cy="280" r="7" fill="#51BEA1"/>
+    
+    <circle cx="450" cy="260" r="22" fill="none" stroke="#51BEA1" stroke-width="2"/>
+    <circle cx="450" cy="260" r="9" fill="#51BEA1"/>
+    
+    <!-- Connection lines -->
+    <line x1="260" y1="175" x2="200" y2="135" stroke="#51BEA1" stroke-width="2" opacity="0.5"/>
+    <line x1="340" y1="175" x2="395" y2="155" stroke="#51BEA1" stroke-width="2" opacity="0.5"/>
+    <line x1="260" y1="225" x2="170" y2="265" stroke="#51BEA1" stroke-width="2" opacity="0.5"/>
+    <line x1="340" y1="225" x2="430" y2="245" stroke="#51BEA1" stroke-width="2" opacity="0.5"/>
+  </g>
+  
+  <!-- Code symbols -->
+  <g opacity="0.3">
+    <text x="80" y="80" font-family="monospace" font-size="24" fill="#51BEA1">&lt;/&gt;</text>
+    <text x="480" y="90" font-family="monospace" font-size="20" fill="#51BEA1">{ }</text>
+    <text x="70" y="340" font-family="monospace" font-size="18" fill="#51BEA1">01010</text>
+    <text x="500" y="350" font-family="monospace" font-size="22" fill="#51BEA1">func()</text>
+  </g>
+  
+  <!-- Floating geometric shapes -->
+  <g opacity="0.4">
+    <rect x="120" y="50" width="15" height="15" fill="#51BEA1" rx="2" transform="rotate(45 127.5 57.5)"/>
+    <polygon points="520,80 530,100 510,100" fill="#51BEA1"/>
+    <circle cx="100" cy="350" r="8" fill="#51BEA1"/>
+    <rect x="540" y="320" width="12" height="12" fill="#51BEA1" rx="2"/>
+  </g>
+</svg>

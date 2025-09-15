@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#51BEA1;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#51BEA1;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#grad3)" rx="20"/>
+  
+  <!-- Team members -->
+  <g id="person1">
+    <circle cx="120" cy="120" r="25" fill="#3498db"/>
+    <rect x="100" y="145" width="40" height="50" fill="#2c3e50" rx="5"/>
+    <circle cx="120" cy="110" r="8" fill="#f4d03f"/>
+  </g>
+  
+  <g id="person2">
+    <circle cx="200" cy="100" r="25" fill="#e74c3c"/>
+    <rect x="180" y="125" width="40" height="50" fill="#2c3e50" rx="5"/>
+    <circle cx="200" cy="90" r="8" fill="#f4d03f"/>
+  </g>
+  
+  <g id="person3">
+    <circle cx="280" cy="130" r="25" fill="#2ecc71"/>
+    <rect x="260" y="155" width="40" height="50" fill="#2c3e50" rx="5"/>
+    <circle cx="280" cy="120" r="8" fill="#f4d03f"/>
+  </g>
+  
+  <!-- Connection lines -->
+  <line x1="145" y1="120" x2="175" y2="100" stroke="#51BEA1" stroke-width="3" opacity="0.7"/>
+  <line x1="225" y1="100" x2="255" y2="130" stroke="#51BEA1" stroke-width="3" opacity="0.7"/>
+  
+  <!-- Communication bubbles -->
+  <ellipse cx="160" cy="70" rx="20" ry="12" fill="#ffffff" opacity="0.8"/>
+  <ellipse cx="240" cy="60" rx="15" ry="10" fill="#ffffff" opacity="0.8"/>
+  
+  <!-- Office building silhouette -->
+  <rect x="50" y="200" width="300" height="80" fill="#34495e" opacity="0.3"/>
+  <rect x="70" y="180" width="20" height="20" fill="#f39c12" opacity="0.6"/>
+  <rect x="110" y="170" width="20" height="30" fill="#f39c12" opacity="0.6"/>
+  <rect x="150" y="185" width="20" height="15" fill="#f39c12" opacity="0.6"/>
+  <rect x="190" y="175" width="20" height="25" fill="#f39c12" opacity="0.6"/>
+  <rect x="230" y="160" width="20" height="40" fill="#f39c12" opacity="0.6"/>
+  <rect x="270" y="180" width="20" height="20" fill="#f39c12" opacity="0.6"/>
+  <rect x="310" y="170" width="20" height="30" fill="#f39c12" opacity="0.6"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="50" cy="50" r="10" fill="#51BEA1" opacity="0.4"/>
+  <circle cx="350" cy="40" r="15" fill="#51BEA1" opacity="0.5"/>
+  <rect x="20" y="160" width="12" height="12" fill="#51BEA1" opacity="0.6" rx="2"/>
+</svg>

@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About us",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title1": "We create",
+    "title2": "digital solutions",
+    "title3": "for your business",
+    "subtitle": "Professional software development services that help transform your ideas into powerful digital products. We specialize in web development, mobile applications, and custom software solutions.",
+    "getStarted": "Get Started",
+    "ourServices": "Our Services"
+  },
+  "services": {
+    "title": "The services we provide"
+  },
+  "about": {
+    "title": "About Blameo",
+    "description": "We are a team of passionate developers and designers dedicated to creating exceptional digital experiences. With years of experience in software development, we help businesses transform their ideas into reality through innovative technology solutions."
+  }
+}
